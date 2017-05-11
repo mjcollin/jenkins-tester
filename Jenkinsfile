@@ -1,10 +1,12 @@
 pipeline {
-    agent spark
-    stages('Build'){
-        steps {
-            echo "Building..."
-            sh "bash touch_tmp"
-            echo "Done."
+    agent { label 'spark' }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building..."
+                sh "bash touch_tmp"
+                echo "Done."
+            }
         }
     }
 }
