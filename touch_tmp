@@ -1,1 +1,2 @@
 date +"%F %T" >> /tmp/jenkins.works
+printenv >> /tmp/jenkins.works
